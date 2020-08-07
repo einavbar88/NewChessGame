@@ -648,7 +648,6 @@ namespace NewChessGame
         }
         bool isValidDiagonalMovement(Move move, ChessPiece[,] board, int i, int j)
         {
-
             if (i == move.Target.X && j == move.Target.Y)
             {
                 if (board[i, j].IsWhite == IsWhite && !board[i, j].IsEmpty)
@@ -656,7 +655,6 @@ namespace NewChessGame
             }
             else if (!board[i, j].IsEmpty)
                 return false;
-
             return true;
         }
         bool isValidDiagonalUpLeftMovement(Move move, ChessPiece[,] board)
