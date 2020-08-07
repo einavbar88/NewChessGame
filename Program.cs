@@ -71,7 +71,6 @@ namespace NewChessGame
                 isWhiteTurn = !isWhiteTurn;
                 isOver = isGameOver(isWhiteTurn);
             }
-
         }
         void PrintBoard()
         {
@@ -281,27 +280,20 @@ namespace NewChessGame
             if (move.From.X == 0)
             {
                 if (move.From.Y == 0 && !hasRookOnA1Moved)
-                {
                     hasRookOnA1Moved = true;
-                    threeRepeatitiveBoardsReset();
-                }
                 else if (move.From.Y == 7 && !hasRookOnH1Moved)
-                {
                     hasRookOnH1Moved = true;
-                    threeRepeatitiveBoardsReset();
-                }
             }
             else if (move.From.X == 7)
+            {
                 if (move.From.Y == 0 && !hasRookOnA8Moved)
-                {
                     hasRookOnA8Moved = true;
-                    threeRepeatitiveBoardsReset();
-                }
                 else if (move.From.Y == 7 && !hasRookOnH8Moved)
-                {
                     hasRookOnH8Moved = true;
-                    threeRepeatitiveBoardsReset();
-                }
+            }
+            else
+                return;
+            threeRepeatitiveBoardsReset();
         }
         void pawnMoved(Move move)
         {
@@ -314,10 +306,9 @@ namespace NewChessGame
                     board[move.From.X, move.From.Y] = promotion(false);
             }
             //en passant capture
-            if (board[move.From.X, move.Target.Y].IsPawnEnPassantThreat && board[move.Target.X, move.Target.Y].IsEmpty &&
-                move.Target.Y != move.From.Y)
+            if (board[move.From.X, move.Target.Y].IsPawnEnPassantThreat && board[move.Target.X, move.Target.Y].IsEmpty
+                && move.Target.Y != move.From.Y)
                 board[move.From.X, move.Target.Y] = new ChessPiece();
-                //if(enPassantMade(move))
             threeRepeatitiveBoardsReset();
             fiftyMovesTie = 0;
         }
@@ -348,7 +339,6 @@ namespace NewChessGame
                         if ((isWhiteTurnOver && !board[i, j].IsWhite || !isWhiteTurnOver && board[i, j].IsWhite) && board[i, j].IsPawnEnPassantThreat)
                             board[i, j].IsPawnEnPassantThreat = false;
                     }
-
                 }
             }
         }
@@ -467,7 +457,6 @@ namespace NewChessGame
                     {
                         Location from = new Location(i, j);
                         Move move = new Move(from, target);
-
                         if (!board[i, j].IsEmpty && isWhiteThreatning == board[i, j].IsWhite && board[i, j].IsValidMove(move, board))
                             return true;
                     }
@@ -711,7 +700,6 @@ namespace NewChessGame
         {
             return IsWhite ? "WN" : "BN";
         }
-
         public override bool IsValidMove(Move move, ChessPiece[,] board)
         {
             if (IsLegalKnightMovement(move.From, move.Target))
@@ -720,7 +708,6 @@ namespace NewChessGame
                     return true;
             return false;
         }
-
         public bool IsLegalKnightMovement(Location from, Location target)
         {
             if ((from.X == target.X + 1 && from.Y == target.Y + 2) || (from.X == target.X - 1 && from.Y == target.Y + 2) ||
@@ -762,7 +749,6 @@ namespace NewChessGame
                     return downMovement(move, board);
             }
             return false;
-
         }
         bool isValidMovement(Move move, ChessPiece[,] board, int i, int j)
         {
@@ -773,52 +759,43 @@ namespace NewChessGame
             }
             else if (!board[i, j].IsEmpty)
                 return false;
-
             return true;
         }
         bool upMovement(Move move, ChessPiece[,] board)
         {
+            for (int i = move.From.X - 1; i >= move.Target.X; i--)
             {
-                for (int i = move.From.X - 1; i >= move.Target.X; i--)
-                {
-                    if (!isValidMovement(move, board, i, move.From.Y))
-                        return false;
-                }
-                return true;
+                if (!isValidMovement(move, board, i, move.From.Y))
+                    return false;
             }
+            return true;
         }
         bool downMovement(Move move, ChessPiece[,] board)
         {
+            for (int i = move.From.X + 1; i <= move.Target.X; i++)
             {
-                for (int i = move.From.X + 1; i <= move.Target.X; i++)
-                {
-                    if (!isValidMovement(move, board, i, move.From.Y))
-                        return false;
-                }
-                return true;
+                if (!isValidMovement(move, board, i, move.From.Y))
+                    return false;
             }
+            return true;
         }
         bool leftMovement(Move move, ChessPiece[,] board)
         {
+            for (int i = move.From.Y - 1; i >= move.Target.Y; i--)
             {
-                for (int i = move.From.Y - 1; i >= move.Target.Y; i--)
-                {
-                    if (!isValidMovement(move, board, move.From.X, i))
-                        return false;
-                }
-                return true;
+                if (!isValidMovement(move, board, move.From.X, i))
+                    return false;
             }
+            return true;
         }
         bool rightMovement(Move move, ChessPiece[,] board)
         {
+            for (int i = move.From.Y + 1; i <= move.Target.Y; i++)
             {
-                for (int i = move.From.Y + 1; i <= move.Target.Y; i++)
-                {
-                    if (!isValidMovement(move, board, move.From.X, i))
-                        return false;
-                }
-                return true;
+                if (!isValidMovement(move, board, move.From.X, i))
+                    return false;
             }
+            return true;
         }
     }
     abstract class Pawn : ChessPiece
@@ -844,7 +821,6 @@ namespace NewChessGame
             else if (board[from.X, target.Y].IsPawnEnPassantThreat && (from.Y == target.Y + 1 || from.Y == target.Y - 1) &&
                     from.X == target.X + upOrDownPawnDirection && ((isWhiteTurn && from.X == 4) || (!isWhiteTurn && from.X == 3)))
                 return true;
-            //else if()
             return false;
         }
     }

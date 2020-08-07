@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/NewChessGame.csproj": {}
+    "/home/einav/GitHub/NewChessGame/NewChessGame.csproj": {}
   },
   "projects": {
-    "/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/NewChessGame.csproj": {
+    "/home/einav/GitHub/NewChessGame/NewChessGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/NewChessGame.csproj",
+        "projectUniqueName": "/home/einav/GitHub/NewChessGame/NewChessGame.csproj",
         "projectName": "NewChessGame",
-        "projectPath": "/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/NewChessGame.csproj",
+        "projectPath": "/home/einav/GitHub/NewChessGame/NewChessGame.csproj",
         "packagesPath": "/home/einav/.nuget/packages/",
-        "outputPath": "/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/",
+        "outputPath": "/home/einav/GitHub/NewChessGame/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/einav/.nuget/NuGet/NuGet.Config"

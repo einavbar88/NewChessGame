@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O8oxi+sDP/495hugV7eQUa3Zdcupmrf9dzE1cR6D5NO+G9/7ycXg2Xfq4zMTiqS0/DIFV0PJBhh8quS7frBdwg==",
+  "dgSpecHash": "C4VoFZPWmZRuDEKOWhN7yKZR3N71q2IjMnu4CLy5G6ie0kSDHLe/xhNMyNush6DXmvNw4RRgZcHuovA0k+LTjg==",
   "success": true,
-  "projectFilePath": "/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/NewChessGame.csproj",
+  "projectFilePath": "/home/einav/GitHub/NewChessGame/NewChessGame.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
