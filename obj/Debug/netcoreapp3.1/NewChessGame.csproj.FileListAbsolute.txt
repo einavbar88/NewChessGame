@@ -1,0 +1,13 @@
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.csprojAssemblyReference.cache
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.AssemblyInfoInputs.cache
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.AssemblyInfo.cs
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.csproj.CoreCompileInputs.cache
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/bin/Debug/netcoreapp3.1/NewChessGame
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/bin/Debug/netcoreapp3.1/NewChessGame.deps.json
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/bin/Debug/netcoreapp3.1/NewChessGame.runtimeconfig.json
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/bin/Debug/netcoreapp3.1/NewChessGame.runtimeconfig.dev.json
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/bin/Debug/netcoreapp3.1/NewChessGame.dll
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/bin/Debug/netcoreapp3.1/NewChessGame.pdb
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.dll
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.pdb
+/home/einav/Documents/Talpiot/CSprojects/Projects/NewChessGame/obj/Debug/netcoreapp3.1/NewChessGame.genruntimeconfig.cache

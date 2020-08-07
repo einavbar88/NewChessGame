@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/einav/.dotnet/store/|arch|/|tfm|",
+      "/home/einav/.nuget/packages"
+    ]
+  }
+}
