@@ -45,6 +45,7 @@ namespace NewChessGame
         ////////////////////turn////////////////////
         public void Play()
         {
+            PrintRules();
             bool isWhiteTurn = true;
             while (!isOver)
             {
@@ -71,6 +72,13 @@ namespace NewChessGame
                 isWhiteTurn = !isWhiteTurn;
                 isOver = isGameOver(isWhiteTurn);
             }
+        }
+        void PrintRules()
+        {
+            Console.WriteLine("How to play:\nIn order to properly enter a move, first pick a piece to move as shown here:\n"
+            + "Player Turn: a2\nThen enter where to move the chosen piece:\nEnter target: a4\n"
+            + "In order to castle your king when it is your turn - enter the word castle and then choos which rook to use.\n"
+            + "In order to ask opponent for mutually agree on a tie enter the word tie."); 
         }
         void PrintBoard()
         {
